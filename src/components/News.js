@@ -45,7 +45,8 @@ const News = (props) => {
     setTotalResults(parsedData.totalResults)
     // this.setState({ articles: parsedData.articles, totalResults: parsedData.totalResults, loading: false });
     props.setProgress(100);
-    console.log(articles[0].author);
+    console.log(articles.author);
+    console.log(articles[0].title)
 
   }
 
@@ -75,22 +76,22 @@ const News = (props) => {
       <div className="container my-3">
         <h2 style={{ marginTop: '90px' }}>NewsMonkey - {props.category}</h2>
         <div className="row">
-          {!loading && articles.map((element) => {
-            return (
-              <div className="col md-3 my-3" key={element.url}>
+          {/* {!loading && articles.map((element) => {
+            return (*/}
+              <div className="col md-3 my-3" key={articles[0].url}> 
                 <NewsItem
-                  title={element.title ? element.title.slice(0, 45) : ""}
+                  title={articles[0].title ? articles[0].title.slice(0, 45) : ""}
                   description={
-                    element.description
-                      ? element.description.slice(0, 88)
+                    articles[0].description
+                      ? articles[0].description.slice(0, 88)
                       : "Lorem ipsum dolor sit amet consectetur adipisicing elit. "
                   }
-                  imageUrl={element.urlToImage ? element.urlToImage : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1R8l6xir6h1yWG4MqWlKR5V9Y-914Qd55TxVee2V4&s"}
-                  newsUrl={element.url} author={element.author} date={element.publishedAt}
+                  // imageUrl={element.urlToImage ? element.urlToImage : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1R8l6xir6h1yWG4MqWlKR5V9Y-914Qd55TxVee2V4&s"}
+                  // newsUrl={element.url} author={element.author} date={element.publishedAt}
                 />
               </div>
-            );
-          })}
+            {/* ); */}
+          {/* })} */}
         </div>
         <div className="container d-flex justify-content-between">
           <button disabled={page <= 1} type="button" className="btn btn-dark" onClick={handlePrevClick}>
