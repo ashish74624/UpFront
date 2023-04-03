@@ -80,7 +80,7 @@ const News = (props) => {
             return (*/}
               <div className="col md-3 my-3" key={articles[0].url}> 
                 <NewsItem
-                  title={articles[0].title ? articles[0].title.slice(0, 45) : ""}
+                  title={articles[1].title ? articles[1].title.slice(0, 45) : ""}
                   description={
                     articles[0].description
                       ? articles[0].description.slice(0, 88)
