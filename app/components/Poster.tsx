@@ -13,7 +13,7 @@ export default function Poster() {
   return (
     <>
       <section
-        className={`relative bg-[#F5C347] lg:h-[62vh] w-screen flex items-center justify-between lg:pl-32 ${merriweather.className} overfolw-clip`}>
+        className={`relative bg-[#F5C347] lg:h-[62vh] w-screen flex items-center justify-between lg:pl-32 ${merriweather.className} overfolw-clip z-0 `}>
         <div className=' space-y-10'>
             <p className='text-black text-8xl'>Stay curious</p>
             <div>
