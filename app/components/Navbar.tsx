@@ -8,7 +8,8 @@ const playfair = Playfair_Display({
 
 export default function Navbar() {
   return (
-    <div className=' bg-slate-700 shadow-sm w-full  z-30 flex justify-center fixed bg-opacity-30 bg-clip-padding blur-background-filter'>
+    // className=' bg-slate-700 shadow-sm w-full  z-30 flex justify-center fixed bg-opacity-30 bg-clip-padding blur-background-filter'
+    <div className=' bg-[#F5C347] shadow-sm w-full  z-30 flex justify-center fixed border-b-2 border-black'>
         <nav className=' bg-transparent  z-20 text-black flex items-center lg:h-[10vh] max-w-screen-xl justify-between w-full '>
         <p className={`${playfair.className} lg:text-2xl  flex flex-row text-black font-bold`}>
             <img className='h-10 w-10' src="/Upfront-logo.png" alt="" />
