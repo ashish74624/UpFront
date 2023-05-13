@@ -1,12 +1,12 @@
 import Poster from "./components/Poster";
-import Text from "./components/Text";
+import Text from "./components/Poster";
 
 
 export default function Home() {
   return (
     <main className="relative">
       <div className=" ">
-        <Text/>
+        <Poster/>
       </div>
     </main>
   )

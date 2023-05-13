@@ -1,10 +1,16 @@
 import React from 'react'
+import { Playfair_Display } from 'next/font/google'
+
+const playfair = Playfair_Display({
+  subsets:["vietnamese"],
+  weight:'400'
+})
 
 export default function Navbar() {
   return (
     <div className=' bg-slate-700 shadow-sm w-full  z-30 flex justify-center fixed bg-opacity-30 bg-clip-padding blur-background-filter'>
         <nav className=' bg-transparent  z-20 text-black flex items-center lg:h-[10vh] max-w-screen-xl justify-between w-full '>
-        <p className='lg:text-2xl  flex flex-row text-black font-bold'>
+        <p className={`${playfair.className} lg:text-2xl  flex flex-row text-black font-bold`}>
             <img className='h-10 w-10' src="/Upfront-logo.png" alt="" />
             UpFront
             </p>
