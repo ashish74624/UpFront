@@ -1,7 +1,10 @@
 export default async function getHeadlines(){
-    const apiKey = process.env.API_KEY;
-    const apiUrl = 'https://newsapi.org/v2/top-headlines?country=in&apiKey=' + apiKey;
-    const res = await fetch(apiUrl);
+    const apikey = process.env.API_KEY;
+    const res = await fetch(`https://newsapi.org/v2/top-headlines?country=in&apiKey=${apikey}`,{
+        next:{
+            revalidate:4
+        }
+    });
     const json = await res.json();
     return json  
 }

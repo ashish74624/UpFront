@@ -1,10 +1,13 @@
 import React from 'react'
 import { Playfair_Display } from 'next/font/google'
+import Image from 'next/image'
+import Link from 'next/link'
 
 const playfair = Playfair_Display({
   subsets:["vietnamese"],
   weight:'400'
 })
+
 
 export default function Navbar() {
   return (
@@ -12,10 +15,12 @@ export default function Navbar() {
     <div className=' bg-[#F5C347] shadow-sm w-full  z-50 flex justify-center fixed border-b-2 border-black'>
         <nav className=' bg-transparent  z-20 text-black flex items-center lg:h-[10vh] max-w-screen-xl justify-between w-full '>
         <p className={`${playfair.className} lg:text-2xl  flex flex-row text-black font-bold`}>
-            <img className='h-10 w-10' src="/Upfront-logo.png" alt="" />
+            <Image className='h-10 w-10' src="/Upfront-logo.png" alt="LOGO" width={100} height={100}/>
             UpFront
             </p>
-        <button className='bg-black w-max h-max lg:px-4 lg:py-2 hover:bg-white text-white hover:text-black transition duration-300 ease-in rounded-full'>Get Started</button>
+        <button className='bg-black w-max h-max lg:px-4 lg:py-2 hover:bg-white text-white hover:text-black transition duration-300 ease-in rounded-full'>
+          <Link href={'/Categories'}>Get Started</Link>
+          </button>
         </nav>
     </div>
   )

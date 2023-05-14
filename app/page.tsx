@@ -1,10 +1,12 @@
 import FrontPage from "./components/FrontPage";
+import Navbar from "./components/Navbar";
 import Poster from "./components/Poster";
 
 
 export default function Home() {
   return (
     <main className="overflow-hidden">
+      <Navbar/>
       <div className="relative z-20">
         <Poster/>
       </div>

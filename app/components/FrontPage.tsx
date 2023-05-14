@@ -7,7 +7,7 @@ const serif = PT_Serif({
 })
 
 export default async function FrontPage() {
-  const postsData : Promise<Headlines> = await getHeadlines();
+  const postsData : Promise<Headlines> =  getHeadlines();
   const post = await postsData
   const articles = post.articles
   const sub = articles.slice(0,6)
@@ -18,8 +18,8 @@ export default async function FrontPage() {
           {
             sub.map((articles)=>{
               return <>
-              <a href="#" className="flex bg-white border border-gray-200 rounded-lg shadow h-20 w-[22vw] hover:bg-gray-100 overflow-hidden">
-                  <img className="object-cover self-center lg:w-20 rounded-t-lg lg:h-20" src={articles.urlToImage ? articles.urlToImage : '/UpFront-placeholder.png'} alt="Image" width='20' height='30' />
+              <a key={articles.title} href="#" className="flex bg-white border border-gray-200 rounded-lg shadow h-20 w-[22vw] hover:bg-gray-100 overflow-hidden">
+                  <img className="object-cover self-center lg:w-20 rounded-t-lg lg:h-20" src={articles.urlToImage ? articles.urlToImage : '/UpFront-placeholder.png'} alt="UpFront" width='20' height='30' />
                   <h5 className="pl-2 mb-2 text-base font-semibold tracking-tight text-gray-900 leading-normal"> {articles.title}
                   </h5>
               </a>
