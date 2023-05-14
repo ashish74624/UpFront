@@ -2,6 +2,7 @@ import React from 'react'
 import { Playfair_Display } from 'next/font/google'
 import Image from 'next/image'
 import Link from 'next/link'
+import Navbtn from './Navbtn'
 
 const playfair = Playfair_Display({
   subsets:["vietnamese"],
@@ -9,7 +10,7 @@ const playfair = Playfair_Display({
 })
 
 
-export default function Navbar() {
+export default function Navbar({btnmsg}:any) {
   return (
     // className=' bg-slate-700 shadow-sm w-full  z-30 flex justify-center fixed bg-opacity-30 bg-clip-padding blur-background-filter'
     <div className=' bg-[#F5C347] shadow-sm w-full  z-50 flex justify-center fixed border-b-2 border-black'>
@@ -18,9 +19,11 @@ export default function Navbar() {
             <Image className='h-10 w-10' src="/Upfront-logo.png" alt="LOGO" width={100} height={100}/>
             UpFront
             </p>
-        <button className='bg-black w-max h-max lg:px-4 lg:py-2 hover:bg-white text-white hover:text-black transition duration-300 ease-in rounded-full'>
-          <Link href={'/Categories'}>Get Started</Link>
-          </button>
+        
+          <Link href={'/Categories'}>
+            <Navbtn msg = {btnmsg}/>
+          </Link>
+          
         </nav>
     </div>
   )

@@ -1,8 +1,8 @@
-"use client"
-
-// import type { Metadata } from "next"
+import type { Metadata } from "next"
 import getNews from "@/lib/getNews"
-import Image from "next/image";
+import Img from "./components/Img"
+import Navbar from "@/app/components/Navbar"
+import Link from "next/link"
 
 type Params ={
     params:{
@@ -10,42 +10,41 @@ type Params ={
     }
 }
 
+export async function  generateMetadata({params:{categories}}:Params):Promise<Metadata>{
+    const res : Promise<News> = getNews(categories)
+    const news = await res;
+    return {
+        title:`UpFront | ${news.totalResults} Results`,
+        description : `Here are the latest news from ${categories} category`
+}
+}
+
+
 export default async function newsPage({params:{categories}}:Params) {
     const res : Promise<News> = getNews(categories)
     const news = await res;
     const articles = news.articles;
   return (
     <>
-        <section className="lg:grid lg:grid-rows-4 lg:gap-x-2 lg:w-[80vw]">
+    <Navbar btnmsg={categories} />
+    <div className="flex justify-center items-center h-max w-screen ">
+        <section className="lg:grid lg:grid-rows-4 lg:grid-cols-4 lg:gap-x-4 lg:gap-y-2 lg:w-max h-max pt-[12vh]">
             {
                 articles.map((articles)=>{
                     return(
-                        <>
-                            
-<div key={articles.title} className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-    <a href="#">
-        <Image className="rounded-t-lg" src={articles.urlToImage ? articles.urlToImage : '/UpFront-placeholder.png'} alt="Image" width={100} height={100} onError={(e:any) => {
-            const target = e.target as HTMLImageElement;
-            target.src = '/UpFront-placeholder.png'
-        // e.target.src = {'/UpFront-placeholder.png'};
-      }} />
-    </a>
-    <div className="p-5">
-        <a href="#">
-            <h5 className="mb-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{articles.title}</h5>
-        </a>
-        <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#F5C347] rounded-lg hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-blue-300 ">
-            Read more
-            <svg aria-hidden="true" className="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-        </a>
-    </div>
-</div>
-
-                        </>
+                        <Link href={`/${categories}/${articles.title}`}>
+                           <div className="relative lg:h-60 w-80 flex rounded-2xl overflow-hidden">
+                            <div className="absolute">
+                            <Img url={articles.urlToImage} />
+                            </div>
+                            <p className="relative  z-10 self-end pb-1 pl-1 w-full h-max pt-2 text-white bg-gradient-to-t from-black via-gray-800/80  to-transparent">{articles.title}</p>
+                        </div> 
+                        </Link>
                     )
                 })
             }
         </section> 
+    </div>
     </>
   )
 }
