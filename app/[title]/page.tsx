@@ -1,13 +1,19 @@
 import getNews from '@/lib/getNews'
 import React from 'react'
 import Navbar from '../components/Navbar'
-import Lorem from '../components/lorem'
+import Lorem from '../components/Lorem'
+import { Metadata } from 'next'
 
 type Params={
     params:{
         title:string
     }
 }
+
+export const metadata: Metadata={
+  title:'UpFront | Article'
+}
+
 export default async function Article({params:{title}}:Params) {
     const res: Promise<News> = getNews(title)
     const news = await res;
