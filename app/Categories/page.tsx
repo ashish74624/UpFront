@@ -17,13 +17,13 @@ export const metadata: Metadata={
 
 export default function Categories() {
   return (
-    <>
+    <main className='lg:h-screen'>
       <Navbar btnmsg="Choose the Categories you would like to see" />
-    <section className={`${polt.className} lg:pt-[12vh] flex justify-center`} id="categories">
+    <section className={`${polt.className} lg:pt-[12vh] flex justify-center `} id="categories">
       <div className='grid grid-cols-3 grid-rows-3 gap-x-4 gap-y-1'>
-        <div className='lg:text-2xl w-max bg-gray-300 hover:bg-gray-400  h-max lg:py-2 lg:px-5 rounded-full'>
-          <Link href={'/Categories/Buisness'}>Buisness</Link>
-        </div>
+      <Link href={'/Categories/Buisness'}><div className='lg:text-2xl w-max bg-gray-300 hover:bg-gray-400  h-max lg:py-2 lg:px-5 rounded-full'>
+          Buisness
+        </div></Link>
         <div className='lg:text-2xl w-max bg-gray-300 hover:bg-gray-400  h-max lg:py-2 lg:px-5 rounded-full'>
           <Link href={'/Categories/Finance'}>Finance</Link>
         </div>
@@ -47,6 +47,6 @@ export default function Categories() {
         </div>
       </div>
     </section>
-    </>
+    </main>
   )
 }
