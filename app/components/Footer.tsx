@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <>
      <footer className={`${cor.className} overflow-hidden lg:h-8 w-screen text-white bg-black flex justify-center items-center`}>
-        Created By : Ashish Kumar
+        Created By : <a target="_main" href="https://github.com/ashish74624">Ashish Kumar</a>
     </footer> 
     </>
   )
