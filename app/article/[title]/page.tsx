@@ -1,7 +1,7 @@
 import getNews from '@/lib/getNews'
 import React from 'react'
-import Navbar from '../components/Navbar'
-import Lorem from '../components/Lorem'
+import Navbar from '../../components/Navbar'
+import Lorem from '../../components/Lorem'
 import { Metadata } from 'next'
 
 type Params={

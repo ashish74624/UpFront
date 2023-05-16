@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function GridBox({url,image,title}:any) {
   return (
     <>
-    <Link href={`/${title}`}>
+    <Link href={`/article/${title}`}>
       <div key={url}
         className=" w-[70vw] h-[30vh] md:w-64 md:h-44 lg:w-72 relative lg:h-56 flex rounded-2xl overflow-hidden md:mb-0 mb-3">
             <div className="absolute">
