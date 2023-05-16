@@ -13,6 +13,14 @@ const nextConfig = {
     images: {
         domains: ['live-production.wcms.abc-cdn.net.au'],
       },
+      exportPathMap: function () {
+        return {
+          "/": { page: "/app" },
+          "/categories": { page: "/app/categories" },
+          "/[title]": { page: "/app/[title]" },
+        };
+      },
+      exportTrailingSlash: true,  
 }
 
 module.exports = nextConfig
