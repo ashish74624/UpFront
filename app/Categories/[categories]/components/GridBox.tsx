@@ -7,9 +7,9 @@ export default function GridBox({url,image,title}:any) {
     <>
     <Link href={`/${title}`}>
       <div key={url}
-        className=" w-72 relative lg:h-56 flex rounded-2xl overflow-hidden">
+        className=" w-[70vw] h-[30vh] md:w-64 md:h-44 lg:w-72 relative lg:h-56 flex rounded-2xl overflow-hidden md:mb-0 mb-3">
             <div className="absolute">
-            <img className=" h-60 w-80" src={image ? image : '/UpFront-placeholder2.png'} alt="Image"  onError={(e:any) => {
+            <img className="w-[70vw] h-[30vh] md:h-60 md:w-80" src={image ? image : '/UpFront-placeholder2.png'} alt="Image"  onError={(e:any) => {
             const target = e.target as HTMLImageElement;
             target.src = '/UpFront-placeholder2.png'
       }} />

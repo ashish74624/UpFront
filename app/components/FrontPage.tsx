@@ -1,4 +1,5 @@
 import getHeadlines from "@/lib/getHeadlines";
+import getNews from "@/lib/getNews";
 import { PT_Serif } from "next/font/google";
 import Link from "next/link";
 
@@ -11,13 +12,14 @@ export default async function FrontPage() {
   const postsData : Promise<News> =  getHeadlines();
   const post = await postsData
   const articles = post.articles
-  const sub = articles.slice(0,6)
+  const sub = articles?.slice(1,7)
   return (
     <section className="relative z-30 bg-white w-screen mb-12 flex justify-center">
       <div>
       <h3 className={`${serif.className} text-2xl lg:pl-32 pt-4`} >Trending on UpFront</h3>
       <div className='grid md:grid-cols-2 md:grid-rows-3 lg:grid-cols-3 lg:grid-rows-2 w-[83vw] h-max pt-4 gap-y-2 lg:ml-32'>
           {
+            sub ? (
             sub.map((articles)=>{
               return <>
               <Link key={articles.title} href={`/${articles.title}`} className="flex bg-white border border-gray-200 rounded-lg shadow h-20 w-[80vw] md:h-32 md:w-[35vw] lg:h-20 lg:w-[22vw] hover:bg-gray-100 overflow-hidden">
@@ -26,7 +28,12 @@ export default async function FrontPage() {
                   </h5>
               </Link>
               </>
-            })
+            })):
+            (<>
+              <div className="h-[30vh] md:h-[12vh] lg:h-[14vh]">
+                Data Not Available At the Moment
+              </div>
+            </>)
           }
         
       </div>
