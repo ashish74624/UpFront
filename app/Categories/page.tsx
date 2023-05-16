@@ -17,32 +17,32 @@ export const metadata: Metadata={
 
 export default function Categories() {
   return (
-    <main className='lg:h-screen'>
+    <main className='h-screen'>
       <Navbar btnmsg="Choose the Categories you would like to see" />
-    <section className={`${polt.className} lg:pt-[12vh] flex justify-center `} id="categories">
-      <div className='grid grid-cols-3 grid-rows-3 gap-x-4 gap-y-1'>
-      <Link href={'/Categories/Buisness'}><div className='lg:text-2xl w-max bg-gray-300 hover:bg-gray-400  h-max lg:py-2 lg:px-5 rounded-full'>
+    <section className={`${polt.className} pt-[8vh] md:pt-[10vh] lg:pt-[12vh] flex justify-center `} id="categories">
+      <div className='grid grid-cols-2 grid-rows-5 md:grid-cols-3 md:grid-rows-3 gap-x-10 md:gap-x-4 gap-y-1'>
+      <Link href={'/Categories/Buisness'}><div className='text-xl lg:text-2xl w-max bg-gray-300 hover:bg-gray-400  h-max  py-2 px-4 md:px-5 rounded-full'>
           Buisness
         </div></Link>
-        <div className='lg:text-2xl w-max bg-gray-300 hover:bg-gray-400  h-max lg:py-2 lg:px-5 rounded-full'>
+        <div className='text-xl lg:text-2xl w-max bg-gray-300 hover:bg-gray-400  h-max  py-2 px-5 rounded-full'>
           <Link href={'/Categories/Finance'}>Finance</Link>
         </div>
-        <div className='lg:text-2xl w-max bg-gray-300 hover:bg-gray-400  h-max lg:py-2 lg:px-5 rounded-full'>
+        <div className='text-xl lg:text-2xl w-max bg-gray-300 hover:bg-gray-400  h-max  py-2 px-5 rounded-full'>
           <Link href={'/Categories/Science'}>Science</Link>
         </div>
-        <div className='lg:text-2xl w-max bg-gray-300 hover:bg-gray-400  h-max lg:py-2 lg:px-5 rounded-full'>
+        <div className='text-xl lg:text-2xl w-max bg-gray-300 hover:bg-gray-400  h-max  py-2 px-5 rounded-full'>
           <Link href={'/Categories/Health'}>Health</Link>
         </div>
-        <div className='lg:text-2xl w-max bg-gray-300 hover:bg-gray-400  h-max lg:py-2 lg:px-5 rounded-full'>
+        <div className='text-xl lg:text-2xl w-max bg-gray-300 hover:bg-gray-400  h-max  py-2 px-5 rounded-full'>
           <Link href={'/Categories/Enviroment'}>Enviroment</Link>
         </div>
-        <div className='lg:text-2xl w-max bg-gray-300 hover:bg-gray-400  h-max lg:py-2 lg:px-5 rounded-full'>
+        <div className='text-xl lg:text-2xl w-max bg-gray-300 hover:bg-gray-400  h-max  py-2 px-5 rounded-full'>
           <Link href={'/Categories/Sports'}>Sports</Link>
         </div>
-        <div className='lg:text-2xl w-max bg-gray-300 hover:bg-gray-400  h-max lg:py-2 lg:px-5 rounded-full'>
+        <div className='text-xl lg:text-2xl w-max bg-gray-300 hover:bg-gray-400  h-max  py-2 px-5 rounded-full'>
           <Link href={'/Categories/Education'}>Education</Link>
         </div>
-        <div className='lg:text-2xl w-max bg-gray-300 hover:bg-gray-400  h-max lg:py-2 lg:px-5 rounded-full'>
+        <div className='text-xl lg:text-2xl w-max bg-gray-300 hover:bg-gray-400  h-max  py-2 px-5 rounded-full'>
           <Link href={'/Categories/Politics'}>Politics</Link>
         </div>
       </div>
