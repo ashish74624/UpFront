@@ -10,8 +10,8 @@ const serif = PT_Serif({
 export default async function FrontPage() {
   const postsData : Promise<News> =  getHeadlines();
   const post = await postsData
-  const articles = post.articles
-  const sub = articles?.slice(1,7)
+  const sub = post?.articles.slice(1,7)
+  // const sub = articles?.slice(1,7)
   return (
     <section className="relative z-30 bg-white w-screen mb-12 flex justify-center">
       <div>
@@ -21,7 +21,7 @@ export default async function FrontPage() {
             sub ? (
             sub.map((articles)=>{
               return <>
-              <Link key={articles.title} href={`/${articles.title}`} className="flex bg-white border border-gray-200 rounded-lg shadow h-20 w-[80vw] md:h-32 md:w-[35vw] lg:h-20 lg:w-[22vw] hover:bg-gray-100 overflow-hidden">
+              <Link key={articles.title} href={`/article/${articles.title}`} className="flex bg-white border border-gray-200 rounded-lg shadow h-20 w-[80vw] md:h-32 md:w-[35vw] lg:h-20 lg:w-[22vw] hover:bg-gray-100 overflow-hidden">
                   <img className="object-cover self-center h-20 w-20 md:w-32 lg:w-20 lg:h-20 rounded-t-lg md:h-36" src={articles.urlToImage ? articles.urlToImage : '/UpFront-placeholder.png'} alt="UpFront" width='20' height='30' />
                   <h5 className="pl-2 mb-2 text-base font-semibold tracking-tight text-gray-900 leading-normal"> {articles.title}
                   </h5>

@@ -25,15 +25,17 @@ export default async function Article({params:{title}}:Params) {
         </>
       )
     }
-    const art = news.articles
+    const Post = news?.articles[0]
     
-    const Post = art[0]
+    // const Post = art[0]
   return (
     
     <>
     <Navbar btnmsg="Article"/>
     <section className='w-screen pt-[8vh] md:pt-[10vh] lg:pt-[10vh] items-center  flex flex-col pb-10'>
       {
+
+        Post ?(
         <main className='pt-2'>
         <div className='relative flex shadow-lg '>
         <h1 className='lg:px-2 rounded-b-xl absolute self-end w-[85vw] md:w-[70vw]  lg:w-full text-xl md:text-4xl font-bold h-max lg:pb-5 pb-4 pt-2  bg-gradient-to-t from-slate-600/80 via-slate-400/70 to-transparent text-gray-800  lg:pt-8' >
@@ -44,6 +46,12 @@ export default async function Article({params:{title}}:Params) {
         <p className='w-[85vw] md:w-[70vw] lg:w-[60vw] text-base text-gray-500'>{Post.description}</p>
         <p className='w-[85vw] md:w-[70vw] lg:w-[60vw] text-xl text-black pt-7'>{Post.content} <Lorem/> </p>
         </main>
+        ):
+        (<>
+          <div className='flex w-screen h-screen justify-center items-center'>
+            Sorry, Post Not Available at the Moment
+          </div>
+        </>)
       }
       </section>
     </>

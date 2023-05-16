@@ -22,8 +22,7 @@ export async function  generateMetadata({params:{categories}}:Params):Promise<Me
 export default async function newsPage({params:{categories}}:Params) {
     const res : Promise<News> = getNews(categories)
     const news = await res;
-    const articles = news.articles;
-    let i=0
+    const articles = news?.articles;
   return (
     <>
     <Navbar btnmsg={categories} />
