@@ -1,10 +1,10 @@
 import React from 'react'
-import { Poltawski_Nowy} from 'next/font/google'
+import { Oswald} from 'next/font/google'
 import Link from 'next/link'
 import Navbar from '../components/Navbar'
 import { Metadata } from 'next'
 
-const polt = Poltawski_Nowy({
+const polt = Oswald({
   subsets:['vietnamese'],
   weight:'400'
 })

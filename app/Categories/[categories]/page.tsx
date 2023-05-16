@@ -35,16 +35,14 @@ export default async function newsPage({params:{categories}}:Params) {
                     
                     return(
                         <GridBox
-                            // id={i++}
+                        key={articles.url}
                             url={articles.url}
                             image={articles.urlToImage}
                             title={articles.title}
                             categories={categories}
                         />
-
                         )
-                    }
-                    
+                    }             
                     )
                 ):
                 (<div className="pt-[12vh] mb-[55vh] md:mb-[30vh] lg:mb-0 h-[40vh] md:h-[45vh] lg:h-[30vh] w-screen justify-center items-center flex text-4xl">

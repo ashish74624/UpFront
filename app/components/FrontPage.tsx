@@ -1,5 +1,4 @@
 import getHeadlines from "@/lib/getHeadlines";
-import getNews from "@/lib/getNews";
 import { PT_Serif } from "next/font/google";
 import Link from "next/link";
 
