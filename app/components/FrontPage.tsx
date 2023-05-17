@@ -11,7 +11,6 @@ export default async function FrontPage() {
   const postsData : Promise<News> =  getHeadlines();
   const post = await postsData
   const sub = post?.articles.slice(1,7)
-  // const sub = articles?.slice(1,7)
   return (
     <section className="relative z-30 bg-white w-screen mb-12 flex justify-center">
       <div>
