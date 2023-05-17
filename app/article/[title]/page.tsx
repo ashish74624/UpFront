@@ -15,7 +15,9 @@ export const metadata: Metadata={
 }
 
 export default async function Article({params:{title}}:Params) {
-    const res: Promise<News> = getNews(title)
+  let title2 = title.replace(/\.txt$/, "");
+
+    const res: Promise<News> = getNews(title2)
     const news = await res;
     if(news.totalResults===0){
       return (
