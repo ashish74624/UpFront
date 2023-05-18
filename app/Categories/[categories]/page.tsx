@@ -20,9 +20,7 @@ export async function  generateMetadata({params:{categories}}:Params):Promise<Me
 
 
 export default async function newsPage({params:{categories}}:Params) {
-    let categories2 = categories.replace(/\.txt$/, "");
-
-    const res : Promise<News> = getNews(categories2)
+    const res : Promise<News> = getNews(categories)
     const news = await res;
     const articles = news?.articles;
   return (
