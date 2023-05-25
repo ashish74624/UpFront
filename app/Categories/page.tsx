@@ -17,7 +17,7 @@ export const metadata: Metadata={
 
 export default function Categories() {
   return (
-    <main className='h-screen'>
+    <main className='h-screen dark:bg-[#1e1e1e]'>
       <Navbar btnmsg="Choose the Categories you would like to see" />
     <section className={`${polt.className} pt-[8vh] md:pt-[10vh] lg:pt-[12vh] flex justify-center `} id="categories">
       <div className='grid grid-cols-2 grid-rows-5 md:grid-cols-3 md:grid-rows-3 gap-x-10 md:gap-x-4 gap-y-1'>

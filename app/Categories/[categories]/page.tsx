@@ -26,7 +26,7 @@ export default async function newsPage({params:{categories}}:Params) {
   return (
     <>
     <Navbar btnmsg={categories} />
-    <div className="flex justify-center items-center h-max w-screen pb-16">
+    <div className="flex justify-center items-center h-max w-screen pb-16 dark:bg-[#1e1e1e]">
         <section className="flex flex-col md:grid  md:grid-rows-4 md:grid-cols-2 lg:grid-cols-3 md:gap-y-4 md:gap-x-4 lg:gap-y-2 lg:w-max h-max pt-[12vh]">
             {
                 articles ?(
