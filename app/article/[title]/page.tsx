@@ -32,7 +32,7 @@ export default async function Article({params:{title}}:Params) {
     
     <>
     <Navbar btnmsg="Article"/>
-    <section className='w-screen pt-[8vh] md:pt-[10vh] lg:pt-[10vh] items-center  flex flex-col pb-10'>
+    <section className='w-screen pt-[8vh] md:pt-[10vh] lg:pt-[10vh] items-center  flex flex-col pb-10 dark:bg-[#1e1e1e]'>
       {
 
         Post ?(
@@ -43,8 +43,8 @@ export default async function Article({params:{title}}:Params) {
         </h1>
         <p className=''><img className='shadow-xl rounded-xl h-[40vh] md:w-[70vw] w-[85vw] md:h-[42vh] lg:w-[60vw] lg:h-[65vh]' src={Post.urlToImage ? Post.urlToImage: "/UpFront-placeholder2.png"} alt='Image'/></p>
         </div>
-        <p className='w-[85vw] md:w-[70vw] lg:w-[60vw] text-base text-gray-500'>{Post.description}</p>
-        <p className='w-[85vw] md:w-[70vw] lg:w-[60vw] text-xl text-black pt-7'>{Post.content} <Lorem/> </p>
+        <p className='w-[85vw] md:w-[70vw] lg:w-[60vw] text-base dark:text-gray-400 text-gray-500'>{Post.description}</p>
+        <p className='w-[85vw] md:w-[70vw] lg:w-[60vw] text-xl text-black pt-7 dark:text-white'>{Post.content} <Lorem/> </p>
         </main>
         ):
         (<>
