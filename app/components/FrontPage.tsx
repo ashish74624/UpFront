@@ -28,7 +28,7 @@ export default async function FrontPage() {
               </>
             })):
             (<>
-              <div className="h-[30vh] md:h-[12vh] lg:h-[14vh]">
+              <div className="h-[30vh] md:h-[12vh] lg:h-[14vh] dark:bg-[#1e1e1e] dark:text-white">
                 Data Not Available At the Moment
               </div>
             </>)

@@ -22,6 +22,14 @@ export async function  generateMetadata({params:{categories}}:Params):Promise<Me
 export default async function newsPage({params:{categories}}:Params) {
     const res : Promise<News> = getNews(categories)
     const news = await res;
+    if(news.status==='error'){
+        return (
+          <>
+            <Navbar btnmsg="We will be back in am Moment"/>
+            <div className="w-screen h-screen flex justify-center pt-[12vh] text-4xl text-gray-700 dark:bg-[#1e1e1e] dark:text-white">No Results Found at the Moment</div>
+          </>
+        )
+      }
     const articles = news?.articles;
   return (
     <>
@@ -44,7 +52,7 @@ export default async function newsPage({params:{categories}}:Params) {
                     }             
                     )
                 ):
-                (<div className="pt-[12vh] mb-[55vh] md:mb-[30vh] lg:mb-0 h-[40vh] md:h-[45vh] lg:h-[30vh] w-screen justify-center items-center flex text-4xl">
+                (<div className="pt-[12vh] mb-[55vh] md:mb-[30vh] lg:mb-0 h-[40vh] md:h-[45vh] lg:h-[30vh] w-screen justify-center items-center flex text-4xl dark:bg-[#1e1e1e] dark:text-white">
                     <h1>No Results Found at the Moment</h1>
                 </div>)
             }    

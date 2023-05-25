@@ -56,7 +56,7 @@ export default async function Article({params:{title}}:Params) {
         </main>
         ):
         (<>
-          <div className='flex w-screen h-screen justify-center items-center'>
+          <div className='flex w-screen h-screen justify-center items-center dark:bg-[#1e1e1e]'>
             Sorry, Post Not Available at the Moment
           </div>
         </>)
