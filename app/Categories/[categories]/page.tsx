@@ -25,7 +25,7 @@ export default async function newsPage({params:{categories}}:Params) {
     if(news.status==='error'){
         return (
           <>
-            <Navbar btnmsg="We will be back in am Moment"/>
+            <Navbar btnmsg="We will be back in a Moment"/>
             <div className="w-screen h-screen flex justify-center pt-[12vh] text-4xl text-gray-700 dark:bg-[#1e1e1e] dark:text-white">No Results Found at the Moment</div>
           </>
         )
