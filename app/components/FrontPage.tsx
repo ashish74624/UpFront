@@ -10,6 +10,13 @@ const serif = PT_Serif({
 export default async function FrontPage() {
   const postsData : Promise<News> =  getHeadlines();
   const post = await postsData
+  if(post.status==='error'){
+    return (
+      <main className="relative z-30 bg-white w-screen h-[40vh] flex justify-center items-center  dark:bg-[#1e1e1e] dark:text-white">
+        <div className="h-[30vh] md:h-[12vh] lg:h-[14vh] dark:bg-[#1e1e1e] dark:text-white">Data Not Available At the Moment</div>
+      </main>
+    )
+  }
   const sub = post?.articles.slice(1,7)
   return (
     <section className="relative z-30 bg-white dark:bg-[#1e1e1e] w-screen pb-12 flex justify-center">
