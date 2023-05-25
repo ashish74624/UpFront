@@ -22,5 +22,8 @@
     ::-webkit-scrollbar-thumb{
         background: transparent;
     }
+    .btn{
+      @apply text-xl lg:text-2xl w-[136px] flex justify-center bg-gray-300 hover:bg-gray-400  h-max  py-2 rounded-xl;
+    }
 
   }

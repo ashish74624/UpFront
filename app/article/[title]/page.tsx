@@ -17,11 +17,19 @@ export const metadata: Metadata={
 export default async function Article({params:{title}}:Params) {
     const res: Promise<News> = getNews(title)
     const news = await res;
+    if(news.status==='error'){
+      return (
+        <>
+          <Navbar btnmsg="We will be back in am Moment"/>
+          <div className="w-screen h-screen flex justify-center pt-[12vh] text-4xl text-gray-700 dark:bg-[#1e1e1e] dark:text-white">Post Not available</div>
+        </>
+      )
+    }
     if(news.totalResults===0){
       return (
         <>
-          <Navbar btnmsg="Article"/>
-          <div className="w-screen h-screen flex justify-center pt-[12vh] text-4xl text-gray-700">Post Not available</div>
+          <Navbar btnmsg="We will be back in am Moment"/>
+          <div className="w-screen h-screen flex justify-center pt-[12vh] text-4xl text-gray-700 dark:text-white dark:bg-[#1e1e1e]">Post Not available</div>
         </>
       )
     }
@@ -31,7 +39,7 @@ export default async function Article({params:{title}}:Params) {
   return (
     
     <>
-    <Navbar btnmsg="Article"/>
+    <Navbar btnmsg="Back To Categories"/>
     <section className='w-screen pt-[8vh] md:pt-[10vh] lg:pt-[10vh] items-center  flex flex-col pb-10 dark:bg-[#1e1e1e]'>
       {
 
