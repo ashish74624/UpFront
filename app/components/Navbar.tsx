@@ -12,7 +12,7 @@ const playfair = Playfair_Display({
 
 export default function Navbar({btnmsg}:any) {
   return (
-    <div className=' bg-[#F5C347] shadow-sm w-full  z-50 flex justify-center fixed border-b-2 border-black'>
+    <div className=' bg-[#F5C347] dark:bg-yellow-600 shadow-sm w-full  z-50 flex justify-center fixed border-b-2 border-black'>
         <nav className=' bg-transparent  z-20 text-black flex items-center h-[6vh] md:h-[8vh] lg:h-[10vh] max-w-screen-xl md:justify-between w-full justify-center lg:px-6 md:px-3 px-0'>
           <Link href={'/'}>
         <p className={`${playfair.className} text-2xl  flex flex-row text-black font-bold `}>
