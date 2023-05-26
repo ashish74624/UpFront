@@ -27,7 +27,7 @@ export default async function FrontPage() {
             sub ? (
             sub.map((articles)=>{
               return <>
-              <Link key={articles.title} href={`/article/${articles.title}`} className="flex bg-white dark:bg-[#3c3c3c] border border-gray-200 dark:border-black rounded-lg shadow h-20 w-[80vw] md:h-32 md:w-[35vw] lg:h-20 lg:w-[22vw] hover:bg-gray-100 hover:dark:bg-[#313030] overflow-hidden ">
+              <Link key={articles.title} href={`/article/${articles.title.replace(/\.txt$/, "")}`} className="flex bg-white dark:bg-[#3c3c3c] border border-gray-200 dark:border-black rounded-lg shadow h-20 w-[80vw] md:h-32 md:w-[35vw] lg:h-20 lg:w-[22vw] hover:bg-gray-100 hover:dark:bg-[#313030] overflow-hidden ">
                   <img className="object-cover self-center h-20 w-20 md:w-32 lg:w-20 lg:h-20 rounded-t-lg md:h-36" src={articles.urlToImage ? articles.urlToImage : '/UpFront-placeholder.png'} alt="UpFront" width='20' height='30' />
                   <h5 className="pl-2 mb-2 text-base font-semibold tracking-tight text-gray-900 leading-normal dark:text-gray-300"> {articles.title}
                   </h5>
