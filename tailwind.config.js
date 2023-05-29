@@ -13,7 +13,8 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       animation:{
-        'slideIn':'slideIn 0.5s '
+        'slideIn':'slideIn 0.5s ',
+        'fadeIn':'fadeIn 2.25s linear'
       }
     },
   },

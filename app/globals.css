@@ -37,3 +37,24 @@
       transform: translateY(0%);
     }
   }
+
+  @keyframes fadeIn {
+    0%,10%,20%{
+      opacity: 0;
+    }
+    25%{
+      opacity: 0.25;
+    }
+    50%{
+      opacity: 0.5;
+      }
+    70%{
+      opacity: 0.8;
+    }  
+    80%{
+      opacity: 0.9;
+    }  
+    100%{  
+      opacity: 1;
+      }
+  }
