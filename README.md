@@ -6,8 +6,8 @@ This is a simple news website built using Next.js, a React framework for server-
 
 To run this project locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/your-repo.git`
-2. Navigate to the project directory: `cd your-repo`
+1. Clone the repository: `git clone https://github.com/ashish74624/UpFront.git`
+2. Navigate to the project directory: `cd UpFront`
 3. Install the dependencies: `npm install`
 4. Obtain an API key from [NewsAPI](https://newsapi.org/) by creating an account and generating a key.
 5. Create a `.env.local` file in the root directory and add the following line, replacing `YOUR_API_KEY` with your actual API key:
@@ -38,7 +38,7 @@ The project uses the following technologies:
 If you'd like to contribute to this project, you can follow these steps:
 
 1. Fork the repository on GitHub.
-2. Clone your forked repository: `git clone https://github.com/your-username/your-repo.git`
+2. Clone your forked repository: `git clone https://github.com/ashish74624/UpFront.git`
 3. Create a new branch for your feature or bug fix: `git checkout -b feature-name`
 4. Make your modifications and commit your changes: `git commit -am 'Add some feature'`
 5. Push the branch to your forked repository: `git push origin feature-name`
