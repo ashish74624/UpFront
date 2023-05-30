@@ -24,7 +24,7 @@ export default function Poster() {
             
             
             <button className='bg-black w-max lg:w-48 h-max px-4 py-2 hover:bg-white text-white hover:text-black transition duration-300 ease-in rounded-full'>
-            <Link href={`/Categories`}>Start Reading</Link></button>
+            <Link href={`/Trending`}>Start Reading</Link></button>
         </div>
         <div className='relative top-4 h-0 md:h-min bg-transparent'>
         <Newspaper/>
