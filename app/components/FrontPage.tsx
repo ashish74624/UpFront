@@ -21,7 +21,9 @@ export default async function FrontPage() {
   return (
     <section className="relative z-30 bg-white dark:bg-[#1e1e1e] w-screen pb-12 flex justify-center">
       <div>
-      <h3 className={`${serif.className} dark:text-white text-2xl lg:pl-32 pt-4`} >Trending on UpFront</h3>
+      <h3 className={`${serif.className} text-transparent md:text-black md:dark:text-white text-2xl lg:pl-32 md:pt-4 pt-0 h-0 w-0 md:h-max md:w-max`} >Trending on UpFront</h3>
+      <Link href={'/Trending'}>
+      <h3 className={`${serif.className} text-black md:text-transparent dark:text-white text-2xl lg:pl-32 pt-4 md:pt-0 h-max w-max md:h-0 md:w-0`} >Trending on UpFront</h3></Link>
       <div className='grid md:grid-cols-2 md:grid-rows-3 lg:grid-cols-3 lg:grid-rows-2 w-[83vw] h-max pt-4 gap-y-2 lg:ml-32'>
           {
             sub ? (
