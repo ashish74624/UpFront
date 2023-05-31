@@ -1,8 +1,8 @@
-import getNews from '@/lib/getNews'
 import React from 'react'
 import Navbar from '../../components/Navbar'
 import Lorem from '../../components/Lorem'
 import { Metadata } from 'next'
+import getNews from '@/lib/getNews'
 
 type Params={
     params:{
@@ -33,7 +33,7 @@ export default async function Article({params:{title}}:Params) {
         </>
       )
     }
-    const Post = news?.articles[0]
+    const Post = news.articles[0]
     
     // const Post = art[0]
   return (
