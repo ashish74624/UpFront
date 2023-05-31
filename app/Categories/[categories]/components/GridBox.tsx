@@ -1,8 +1,11 @@
 "use client"
 
 import Link from "next/link";
+import { useCtg } from "@/app/Context/CtgContext";
 
-export default function GridBox({url,image,title}:any) {
+export default function GridBox({url,image,title,categories}:any) {
+  const { setCtg }:any = useCtg();
+  setCtg(categories);
   return (
     <>
     <Link href={`/article/${title}`}>
