@@ -23,8 +23,12 @@ export default function Poster() {
             </div>
             
             
-            <button className='bg-black w-max lg:w-48 h-max px-4 py-2 hover:bg-white text-white hover:text-black transition duration-300 ease-in rounded-full'>
-            <Link href={`/Trending`}>Start Reading</Link></button>
+            <button className='md:bg-black w-0 h-0 px-0 py-0 md:w-max lg:w-48 md:h-max md:px-4 md:py-2 text-transparent bg-transparent md:hover:bg-white md:text-white md:hover:text-black transition duration-300 ease-in rounded-full'>
+            <Link href={`/Trending`}>Start Reading</Link>
+            </button>
+            <button className='bg-black w-max md:w-0 md:h-0 h-max md:px-0 md:py-0 px-4 py-2 hover:bg-white text-white md:text-transparent hover:text-black transition duration-300 ease-in rounded-full'>
+            <Link href={`/Categories`}>Start Reading</Link>
+            </button>
         </div>
         <div className='relative top-4 h-0 md:h-min bg-transparent'>
         <Newspaper/>
