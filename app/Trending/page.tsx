@@ -20,9 +20,11 @@ export default async function Trending() {
   const post = await postsData
   if(post.status==='error'){
     return (
-      <main className="relative z-30 bg-white w-screen h-screen flex justify-center items-center  dark:bg-[#1e1e1e] dark:text-white">
+      <>
+      <Navbar btnmsg="We will be Right back"/>
+      <main className="pt-[10vh] relative z-30 bg-white w-screen h-screen flex justify-center items-center  dark:bg-[#1e1e1e] dark:text-white">
         <div className="h-[30vh] md:h-[12vh] lg:h-[14vh] dark:bg-[#1e1e1e] dark:text-white">Data Not Available At the Moment</div>
-      </main>
+      </main></>
     )
   }
   const articles = post?.articles;
