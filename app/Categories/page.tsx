@@ -3,6 +3,12 @@ import { Oswald} from 'next/font/google'
 import Link from 'next/link'
 import Navbar from '../components/Navbar'
 import { Metadata } from 'next'
+import { PT_Serif } from "next/font/google";
+
+const serif = PT_Serif({
+  subsets : ['cyrillic'],
+  weight : '400'
+})
 
 const polt = Oswald({
   subsets:['vietnamese'],
@@ -18,8 +24,9 @@ export const metadata: Metadata={
 export default function Categories() {
   return (
     <main className='h-screen dark:bg-[#1e1e1e]'>
-      <Navbar btnmsg="Choose the Categories you would like to see" back ={true} />
-    <section className={`${polt.className} pt-[8vh] md:pt-[10vh] lg:pt-[12vh] flex justify-center `} id="categories">
+      <Navbar btnmsg="Categories" back ={true} />
+      <p className={`${serif.className} dark:text-white text-xl pb-4 flex w-screen justify-center pt-[8vh] md:pt-[10vh]`}>Choose the Categories you would like to see</p>
+    <section className={`${polt.className}  w-screen lg:pt-[12vh] flex justify-center `} id="categories">  
       <div className='grid grid-cols-2 grid-rows-5 md:grid-cols-3 md:grid-rows-3 gap-x-2 md:gap-x-2 gap-y-2'>
       <Link href={'/Categories/Buisness'}><div className='btn'>
           Buisness
