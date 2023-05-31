@@ -13,8 +13,8 @@ export async function  generateMetadata({params:{categories}}:Params):Promise<Me
     const res : Promise<News> = getNews(categories)
     const news = await res;
     return {
-        title:`UpFront | ${news.totalResults} Results`,
-        description : `Here are the latest news from ${categories} category`
+        title:`UpFront | ${categories}`,
+        description : `Here are the latest news from ${categories} category a total of ${news.totalResults} results.`
 }
 }
 
@@ -25,7 +25,7 @@ export default async function newsPage({params:{categories}}:Params) {
     if(news.status==='error'){
         return (
           <>
-            <Navbar btnmsg="We will be back in a Moment"/>
+            <Navbar btnmsg="We will be back in a Moment" route={`/`}/>
             <div className="w-screen h-screen flex justify-center pt-[12vh] text-4xl text-gray-700 dark:bg-[#1e1e1e] dark:text-white">No Results Found at the Moment</div>
           </>
         )
@@ -33,7 +33,7 @@ export default async function newsPage({params:{categories}}:Params) {
     const articles = news?.articles;
   return (
     <>
-    <Navbar btnmsg={categories} />
+    <Navbar btnmsg="Back to Categories" route={`/${categories}`} />
     <div className="flex justify-center items-center h-max w-screen pb-16 dark:bg-[#1e1e1e]">
         <section className="flex flex-col md:grid  md:grid-rows-4 md:grid-cols-2 lg:grid-cols-3 md:gap-y-4 md:gap-x-4 lg:gap-y-2 lg:w-max h-max pt-[12vh]">
             {

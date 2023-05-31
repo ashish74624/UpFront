@@ -6,7 +6,7 @@ import Poster from "./components/Poster";
 export default function Home() {
   return (
     <main className="overflow-hidden bg-[#F5C347] dark:bg-yellow-600">
-      <Navbar btnmsg="Get Started"/>
+      <Navbar btnmsg="Get Started" back={true}/>
       <div className="relative z-20">
         <Poster/>
       </div>
