@@ -31,11 +31,11 @@ export default async function Trending() {
 
   return (
     <>
-      <Navbar btnmsg="Trending"/>
+      <Navbar btnmsg="Get Started" back={true}/>
       <section className="pt-[7vh] md:pt-[9vh] lg:pt-[11vh] relative z-30 bg-white dark:bg-[#1e1e1e] w-screen pb-12 ">
       <div className='flex flex-col h-max items-center'>
-      <h3 className={`${serif.className} dark:text-white text-2xl lg:pl-32 pt-4`} >Trending on UpFront</h3>
-      <div className='grid md:grid-cols-2 md:grid-rows-3 lg:grid-cols-3 lg:grid-rows-2  md:w-[83vw] h-max pt-4 gap-y-2 lg:ml-32 gap-x-4'>
+      <h3 className={`${serif.className} dark:text-white text-2xl pt-4`} >Trending on UpFront</h3>
+      <div className='grid md:grid-cols-2 md:grid-rows-3 lg:grid-cols-3 lg:grid-rows-2  md:w-[80vw] h-max pt-4 gap-y-2  gap-x-4'>
           {
             articles ? (
             articles.map((articles)=>{
