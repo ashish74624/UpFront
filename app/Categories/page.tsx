@@ -25,7 +25,7 @@ export default function Categories() {
   return (
     <main className='h-screen dark:bg-[#1e1e1e]'>
       <Navbar btnmsg="Categories" back ={true} />
-      <p className={`${serif.className} dark:text-white text-xl pb-4 flex w-screen justify-center pt-[8vh] md:pt-[10vh] lg:pt-[12vh] lg:text-2xl`}>Choose the Categories you would like to see</p>
+      <p className={`${serif.className} dark:text-white text-xl pb-4 flex w-screen justify-center min-pt-[65px] pt-[8vh] md:pt-[10vh] lg:pt-[12vh] lg:text-2xl`}>Choose the Categories you would like to see</p>
     <section className={`${polt.className}  w-screen  flex justify-center `} id="categories">  
       <div className='grid grid-cols-2 grid-rows-5 md:grid-cols-3 md:grid-rows-3 gap-x-2 md:gap-x-2 gap-y-2'>
       <Link href={'/Categories/Buisness'}><div className='btn'>

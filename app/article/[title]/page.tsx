@@ -40,7 +40,7 @@ export default async function Article({params:{title}}:Params) {
     
     <>
     <Navbar btnmsg="Back To Categories"/>
-    <section className='w-screen pt-[8vh] md:pt-[10vh] lg:pt-[10vh] items-center  flex flex-col pb-10 dark:bg-[#1e1e1e]'>
+    <section className='w-screen min-pt-[65px] pt-[8vh] md:pt-[10vh] lg:pt-[10vh] items-center  flex flex-col pb-10 dark:bg-[#1e1e1e]'>
       {
 
         Post ?(
